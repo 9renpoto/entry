@@ -1,4 +1,6 @@
 # @9renpoto/entry
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/9renpoto/entry.svg)](https://greenkeeper.io/)
  
 Gatsby starter for creating a blog
 
