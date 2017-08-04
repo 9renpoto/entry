@@ -1,3 +1,10 @@
+public
+.gatsby-context.js
+.intermediate-representation/
+.cache/
+
+### https://raw.github.com/github/gitignore/be962308a6efb6d27446d13ee05b74948e616a01/Node.gitignore
+
 # Logs
 logs
 *.log

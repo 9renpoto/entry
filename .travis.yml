@@ -1,0 +1,22 @@
+language: node_js
+sudo: false
+node_js:
+- stable
+- 7
+- 6
+cache:
+  directories:
+  - node_modules
+env:
+  matrix:
+  - CMD=lint
+  - CMD=test
+  - CMD=flow
+matrix:
+  fast_finish: true
+script:
+- npm run $CMD
+after_success:
+- '[ "$TRAVIS_BRANCH" == master ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && npm run coverage'
+notifications:
+  email: false
