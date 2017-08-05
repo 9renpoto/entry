@@ -1,18 +1,18 @@
 {
-  "name": "gatsby-starter-blog",
-  "description": "Starter Gatsby Blog",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "@9renpoto/entry",
+  "description": "Lazy build blog",
+  "version": "0.0.1",
+  "author": "github.com/9renpoto",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
+    "url": "https://github.com/9renpoto/entry/issues"
   },
   "dependencies": {
+    "@9renpoto/style": "github:9renpoto/style",
     "gatsby": "^1.6.5",
     "gatsby-link": "^1.6.5",
     "gatsby-plugin-google-analytics": "^1.0.1",
     "gatsby-plugin-manifest": "^1.0.1",
     "gatsby-plugin-offline": "^1.0.1",
-    "gatsby-plugin-preact": "^1.0.1",
     "gatsby-plugin-react-helmet": "^1.0.1",
     "gatsby-plugin-sharp": "^1.5.0",
     "gatsby-remark-copy-linked-files": "^1.5.0",
@@ -42,7 +42,7 @@
     "npm-run-all": "^4.0.2",
     "prettier-eslint-cli": "^4.1.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/9renpoto/entry#readme",
   "keywords": [
     "gatsby"
   ],
@@ -55,9 +55,10 @@
     ]
   },
   "main": "n/a",
+  "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/9renpoto/entry.git"
   },
   "scripts": {
     "build": "gatsby build",
