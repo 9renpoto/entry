@@ -1,10 +1,17 @@
-import React from 'react'
+/* @flow */
+import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import { Container } from 'react-responsive-grid'
 
 import { rhythm, scale } from '../utils/typography'
 
-class Template extends React.Component {
+type Props = {
+  children: Function,
+  location: Object
+}
+
+export default class Template extends Component {
+  props: Props
   render () {
     const { location, children } = this.props
     let header
@@ -64,10 +71,3 @@ class Template extends React.Component {
     )
   }
 }
-
-Template.propTypes = {
-  children: React.PropTypes.function,
-  location: React.PropTypes.object
-}
-
-export default Template
