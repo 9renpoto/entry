@@ -26,14 +26,13 @@
     "lodash": "^4.17.4",
     "react-responsive-grid": "^0.3.4",
     "react-typography": "^0.16.1",
-    "typeface-merriweather": "^0.0.33",
-    "typeface-montserrat": "^0.0.33",
     "typography": "^0.16.0",
     "typography-theme-wordpress-2016": "^0.15.10"
   },
   "devDependencies": {
     "@9renpoto/eslint-config-flowtype": "^0.4.0",
     "@9renpoto/eslint-config-react": "^0.1.0",
+    "babel-preset-flow": "^6.23.0",
     "eslint": "^4.3.0",
     "flow-bin": "^0.52.0",
     "gh-pages": "^1.0.0",
