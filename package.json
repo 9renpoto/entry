@@ -65,7 +65,7 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "dev": "gatsby develop",
     "lint": "run-p lint:*",
-    "lint:eslint": "eslint . --ext=js,jsx",
+    "lint:eslint": "eslint . --ext=js,jsx --cache",
     "lint:flow": "flow",
     "precommit": "lint-staged",
     "start": "gatsby develop",
