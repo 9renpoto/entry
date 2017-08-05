@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const Promise = require('bluebird')
 const path = require('path')
 
@@ -6,7 +5,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
 
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('./src/templates/blog-post.js')
+    const blogPost = path.resolve('./src/templates/blog-post.jsx')
     resolve(
       graphql(
         `
@@ -29,7 +28,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
 
         // Create blog posts pages.
-        _.each(result.data.allMarkdownRemark.edges, edge => {
+        result.data.allMarkdownRemark.edges.map(edge => {
           createPage({
             path: edge.node.frontmatter.path,
             component: blogPost,
