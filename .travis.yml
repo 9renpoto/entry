@@ -6,8 +6,14 @@ node_js:
 - 6
 env:
   matrix:
+  - CMD=test
   - CMD=lint
   - CMD=build
+matrix:
+  fast_finish: true
+  allow_failures:
+  - env: CMD=test
+  - env: CMD=lint
 script:
 - npm run $CMD
 notifications:

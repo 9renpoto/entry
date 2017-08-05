@@ -16,9 +16,9 @@
     "gatsby-plugin-react-helmet": "^1.0.1",
     "gatsby-plugin-sharp": "^1.5.0",
     "gatsby-remark-copy-linked-files": "^1.5.0",
+    "gatsby-remark-images": "^1.5.0",
     "gatsby-remark-prismjs": "^1.2.0",
     "gatsby-remark-responsive-iframe": "^1.4.1",
-    "gatsby-remark-images": "^1.5.0",
     "gatsby-remark-smartypants": "^1.4.1",
     "gatsby-source-filesystem": "^1.4.1",
     "gatsby-transformer-remark": "^1.6.3",
@@ -32,25 +32,42 @@
     "typography-theme-wordpress-2016": "^0.15.10"
   },
   "devDependencies": {
-    "gh-pages": "^1.0.0"
+    "@9renpoto/eslint-config-flowtype": "^0.4.0",
+    "@9renpoto/eslint-config-react": "^0.1.0",
+    "eslint": "^4.3.0",
+    "flow-bin": "^0.52.0",
+    "gh-pages": "^1.0.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.2",
+    "npm-run-all": "^4.0.2",
+    "prettier-eslint-cli": "^4.1.1"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier-eslint --write",
+      "eslint --cache",
+      "git add"
+    ]
+  },
   "main": "n/a",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
   },
   "scripts": {
-    "dev": "gatsby develop",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "develop": "gatsby develop",
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
+    "dev": "gatsby develop",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint . --ext=js,jsx",
+    "lint:flow": "flow",
+    "precommit": "lint-staged",
+    "start": "gatsby develop",
+    "test": "npm run lint"
   }
 }
