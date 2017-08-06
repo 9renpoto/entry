@@ -13,4 +13,3 @@
 [lints]
 
 [options]
-module.name_mapper.extension='css' -> 'empty/object'
