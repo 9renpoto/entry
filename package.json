@@ -22,20 +22,18 @@
     "gatsby-remark-smartypants": "^1.4.1",
     "gatsby-source-filesystem": "^1.4.1",
     "gatsby-transformer-remark": "^1.6.3",
-    "gatsby-transformer-sharp": "^1.5.0",
-    "react-responsive-grid": "^0.3.4",
-    "react-typography": "^0.16.1",
-    "typography": "^0.16.0",
-    "typography-theme-wordpress-2016": "^0.15.10"
+    "gatsby-transformer-sharp": "^1.5.0"
   },
   "devDependencies": {
     "@9renpoto/eslint-config-flowtype": "^0.4.0",
     "@9renpoto/eslint-config-react": "^0.1.0",
     "babel-preset-flow": "^6.23.0",
     "cross-env": "^5.0.3",
+    "cssnano-cli": "^1.0.5",
     "empty": "^0.10.1",
     "eslint": "^4.3.0",
     "flow-bin": "^0.52.0",
+    "gatsby-plugin-sitemap": "^1.2.0",
     "gh-pages": "^1.0.0",
     "husky": "^0.14.3",
     "lint-staged": "^4.0.2",
@@ -62,15 +60,17 @@
     "url": "git+https://github.com/9renpoto/entry.git"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=production gatsby build",
+    "b:css": "mkdir -p static && cssnano ./node_modules/@9renpoto/style/lib/main.css static/main.min.css",
+    "b:static": "cross-env NODE_ENV=production gatsby build",
+    "build": "run-s clean b:css b:static",
+    "clean": "rimraf public static",
     "deploy": "npm run build -- --prefix-paths && gh-pages -d public",
     "dev": "gatsby develop",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint . --ext=js,jsx --cache",
     "lint:flow": "flow",
-    "prebuild": "rimraf public",
     "precommit": "lint-staged",
-    "start": "gatsby develop",
+    "start": "npm run b:css && gatsby develop",
     "test": "npm run lint"
   }
 }

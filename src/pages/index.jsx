@@ -3,9 +3,6 @@ import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
-import { rhythm } from '../utils/typography'
-
-declare var graphql: any // TODO remove
 type Props = {
   data: any
 }
@@ -18,12 +15,7 @@ export default class BlogIndex extends Component {
     posts.forEach(post => {
       if (post.node.path !== '/404/') {
         pageLinks.push(
-          <li
-            key={post.node.frontmatter.path}
-            style={{
-              marginBottom: rhythm(1 / 4)
-            }}
-          >
+          <li key={post.node.frontmatter.path}>
             <Link style={{ boxShadow: 'none' }} to={post.node.frontmatter.path}>
               {post.node.frontmatter.title}
             </Link>
@@ -43,6 +35,7 @@ export default class BlogIndex extends Component {
   }
 }
 
+declare var graphql: any // TODO remove
 export const pageQuery = graphql`
   query IndexQuery {
     site {

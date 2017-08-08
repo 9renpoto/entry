@@ -1,8 +1,9 @@
-/* @flow */
 module.exports = {
   siteMetadata: {
     title: ':-)',
-    author: 'github.com/9renpoto'
+    author: 'github.com/9renpoto',
+    description: 'lazy buld suspicious note',
+    siteUrl: 'https://9renpoto.github.io'
   },
   plugins: [
     {
@@ -43,6 +44,7 @@ module.exports = {
       }
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`
   ]
 }

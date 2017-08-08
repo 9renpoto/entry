@@ -2,48 +2,43 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 
-import { rhythm, scale } from '../utils/typography'
-
-declare var graphql: any // TODO remove
 type Props = {
   data: any
 }
 
-class BlogPostTemplate extends Component {
+export default class BlogPostTemplate extends Component {
   props: Props
   render () {
-    const post = this.props.data.markdownRemark
+    const { frontmatter, html } = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
 
     return (
       <div>
-        <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-        <h1>
-          {post.frontmatter.title}
-        </h1>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: 'block',
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1)
-          }}
-        >
-          {post.frontmatter.date}
-        </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1)
-          }}
-        />
+        <Helmet title={`${frontmatter.title} | ${siteTitle}`} />
+        <section className='hero is-primary'>
+          <div className='hero-body'>
+            <div className='container'>
+              <h1 className='title'>
+                {frontmatter.title}
+              </h1>
+              <h2 className='subtitle'>
+                {frontmatter.date}
+              </h2>
+            </div>
+          </div>
+        </section>
+        <section className='section'>
+          <div
+            className='container is-fluid'
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+        </section>
       </div>
     )
   }
 }
 
-export default BlogPostTemplate
-
+declare var graphql: any // TODO remove
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
     site {

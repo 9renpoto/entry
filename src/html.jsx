@@ -1,39 +1,19 @@
 /* @flow */
 import React, { Component } from 'react'
-import { TypographyStyle } from 'react-typography'
-
-import typography from './utils/typography'
-
-let stylesStr
-if (process.env.NODE_ENV === `production`) {
-  try {
-    stylesStr = require(`!raw-loader!../public/styles.css`)
-  } catch (e) {
-    console.log(e)
-  }
-}
 
 type Props = {
-  headComponents: ReactElement<any>,
-  postBodyComponents: ReactElement<any>,
+  headComponents: React$Element<any>,
+  postBodyComponents: React$Element<any>,
   body: any
 }
+
+declare var __PATH_PREFIX__: string
 
 export default class HTML extends Component {
   props: Props
   render () {
-    let css
-    if (process.env.NODE_ENV === `production`) {
-      css = (
-        <style
-          id='gatsby-inlined-css'
-          dangerouslySetInnerHTML={{ __html: stylesStr }}
-        />
-      )
-    }
-
     return (
-      <html lang='en'>
+      <html lang='ja'>
         <head>
           <meta charSet='utf-8' />
           <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
@@ -41,9 +21,12 @@ export default class HTML extends Component {
             name='viewport'
             content='width=device-width, initial-scale=1.0'
           />
+          <link
+            rel='stylesheet'
+            type='text/css'
+            href={`${__PATH_PREFIX__}/main.min.css`}
+          />
           {this.props.headComponents}
-          <TypographyStyle typography={typography} />
-          {css}
         </head>
         <body>
           <div
