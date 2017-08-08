@@ -10,7 +10,7 @@ categories:
 
 書いたもの： <https://github.com/9renpoto/slack-channel-active-reminder>
 
-![image](/images/slack-channel-active-reminder.png)
+![image](./slack-channel-active-reminder.png)
 
 slackの部屋は便利に増やしていけますが、
 同じような部屋が散乱したり、入ってみたものの活動が薄かったり様々あるので

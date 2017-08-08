@@ -10,7 +10,7 @@ categories:
 - 修理は見送り
 - 気が向いたらスリムを買い直す（4Kテレビを買う予定がない）
 
-![ps4](/images/ps4-CUH-1200AB01.png)
+![ps4](./ps4-CUH-1200AB01.png)
 
 ## 言われてみればPlayStationは初破損
 

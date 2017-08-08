@@ -9,12 +9,12 @@ categories:
 
 手放すことになったので綺麗にする。
 
-![before](/photo/IMG_1099.JPG)
+![before](./IMG_1099.JPG)
 
 手動の限界。
 
-![after](/photo/IMG_1101.JPG)
+![after](./IMG_1101.JPG)
 
 薬品使ってなんとかここまで、お世話になりました。
 
-![final](/photo/IMG_1102.JPG)
+![final](./IMG_1102.JPG)
