@@ -24,7 +24,7 @@ export default class HTML extends Component {
           <link
             rel='stylesheet'
             type='text/css'
-            href={`${__PATH_PREFIX__}/main.css`}
+            href={`${__PATH_PREFIX__}/main.min.css`}
           />
           {this.props.headComponents}
         </head>

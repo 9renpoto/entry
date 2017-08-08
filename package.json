@@ -69,7 +69,7 @@
     "lint:eslint": "eslint . --ext=js,jsx --cache",
     "lint:flow": "flow",
     "precommit": "lint-staged",
-    "start": "gatsby develop",
+    "start": "npm run b:css && gatsby develop",
     "test": "npm run lint"
   }
 }
