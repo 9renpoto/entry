@@ -7,6 +7,8 @@ type Props = {
   body: any
 }
 
+declare var __PATH_PREFIX__: string
+
 export default class HTML extends Component {
   props: Props
   render () {
@@ -18,6 +20,11 @@ export default class HTML extends Component {
           <meta
             name='viewport'
             content='width=device-width, initial-scale=1.0'
+          />
+          <link
+            rel='stylesheet'
+            type='text/css'
+            href={`${__PATH_PREFIX__}/main.css`}
           />
           {this.props.headComponents}
         </head>

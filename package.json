@@ -29,6 +29,7 @@
     "@9renpoto/eslint-config-react": "^0.1.0",
     "babel-preset-flow": "^6.23.0",
     "cross-env": "^5.0.3",
+    "cssnano-cli": "^1.0.5",
     "empty": "^0.10.1",
     "eslint": "^4.3.0",
     "flow-bin": "^0.52.0",
@@ -58,13 +59,15 @@
     "url": "git+https://github.com/9renpoto/entry.git"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=production gatsby build",
+    "b:css": "mkdir -p static && cssnano ./node_modules/@9renpoto/style/lib/main.css static/main.min.css",
+    "b:static": "cross-env NODE_ENV=production gatsby build",
+    "build": "run-s clean b:css b:static",
+    "clean": "rimraf public static",
     "deploy": "npm run build -- --prefix-paths && gh-pages -d public",
     "dev": "gatsby develop",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint . --ext=js,jsx --cache",
     "lint:flow": "flow",
-    "prebuild": "rimraf public",
     "precommit": "lint-staged",
     "start": "gatsby develop",
     "test": "npm run lint"
