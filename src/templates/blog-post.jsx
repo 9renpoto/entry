@@ -28,10 +28,12 @@ export default class BlogPostTemplate extends Component {
           </div>
         </section>
         <section className='section'>
-          <div
-            className='container is-fluid'
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+          <div className='container is-fluid'>
+            <div
+              className='content'
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+          </div>
         </section>
       </div>
     )
