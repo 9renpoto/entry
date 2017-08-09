@@ -8,5 +8,7 @@ env:
   - CMD=build
 script:
 - npm run $CMD
+after_script:
+- '[ "$TRAVIS_BRANCH" == master ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && ["$CMD" === "test"] && bash ./deploy.sh'
 notifications:
   email: false

@@ -62,9 +62,9 @@
   "scripts": {
     "b:css": "mkdir -p static && cssnano ./node_modules/@9renpoto/style/lib/main.css static/main.min.css",
     "b:static": "cross-env NODE_ENV=production gatsby build",
-    "build": "run-s clean b:css b:static",
+    "build": "run-s b:css b:static",
     "clean": "rimraf public static",
-    "deploy": "npm run build -- --prefix-paths && gh-pages -d public",
+    "deploy": "npm run b:css && npm run b:static -- --prefix-paths",
     "dev": "gatsby develop",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint . --ext=js,jsx --cache",
