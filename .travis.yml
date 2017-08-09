@@ -6,11 +6,12 @@ env:
   - CMD=test
   - CMD=build
   global:
-    secure: oJbjJLmJm/6wNEXxd47pXJEHJIAU5i5QdByfFfAjwKptoWlKRx+nbBhWHvg2Q67KQvm03jC+LkU6oIuHlh8WTibz+YYrz2uWm+SBmhEaXYqMY2F9Gr9/j/j2RAD3JAfQLujQPPJj8wgsjLdkLVrkQYH2Yh1nddBbxSla8mxywmY/5vVMNvxm9DjVl2ividSVH5eF7ls5A0g6MXZ/hcl2PkjYD7hYEwlRs2EKBe3M+n6VHFK/dgLXvRzzXaBWdD3pD3Vlbrmd+kWfuPSG/5V+fCf8RzdXfOyNMQBjfH2xkfXMiln/B7VVDUrUYEBGPNwllDDwKIR5x+OUDUSCVZlRNUuIAWThKaRtxovMUItXEPING3oPJO8fmYyNwUSK67nsP8Elj55CV3PtgyvZLvqg4SC22x1NGrrByDd1JjHfH7cVd4t7bn2REp16g/Z3Vys1jZ0PrMO/aNe/glBS+gypRpisuSEnwWTTeS9SKSeRwiW+uNlG+2RlA1dOiTiez1VuO3PE0HZR5+JsJf7HRBKB2cMWHr4f//20eD1HUMUGF99KVISI0WCgsJnOaabJJVKGzcxCTyREMXP3jLvaj5V8YpyFMvdqC+5/7UfyJTgw1xLpGEXdsh0LGCOV0R0gMCCaPGhLx2HWQ9doDOQxZLTTDxVfKf8G+L7JmTBfbeqLwfk=
+  - secure: LwSzHftOhfG//XHDvq51HTGbwicb1QgV/Ywvt4vD20tDWhOUeeENH+KHUuLhk9T4eTQPE2iQyH0RaBSNEYAfJvIa930qGR3mHtfRy+mqF6YjXeO4iuU4uIaqJo0rF4nBxrMCfauKTjv1Nelzl5Ln/qBhHETdH4Pzd54n4Qaor+EvmQItsGzWGiuuQA/AZBHXm3X8eKY0xXjKtmzTb+gB09hJfmFhHXlXb8GyB3fg8nFsnCwtk0g2bf9W7pc6pdCyRN1f5U4WB4GApQDYOoEet5xha5nPWPrTWi9bQhPb0LbPbZLdI4/l2HfzCq2DAKdm0PbcuUbHo64Sro9/mSDr++8k8ddeJhQgPVpjjxkWL3eDxWqjeZ8iSj9uQwIEZsDiLAjYkBAYW4zqU33ya3ecQCcj07f6Ff37K8acpsNLQ25QF5rkYAtLzewN6zy1yFUZ+uV0ABVlspElU3fzIG0GHOgD8N9XQaUIoATQvXVNE0z6OfEedCZAFuNTUN552U4KT8AZq92n4g43GRMR5HTcOa+TBpfG6ljhR41B98XnaEb0+EPf6BQguylg9pk1+n8UWlY8SskDYmpAi7Tgcs9Mb0QVy2NwptDfiwSDbVUzQT3X/sJpEpVu2j3nuEgl7bggpwYve9J8ijoPIxi8qFJJjhGuTEIg259Vr+Yft6upkKo=
 script:
 - npm run $CMD
 after_success:
-- echo -e "Host github.com\n\tStrictHostKeyChecking no\nIdentityFile ~/.ssh/deploy.key\n" >> ~/.ssh/config
+- echo -e "Host github.com\n\tStrictHostKeyChecking no\nIdentityFile ~/.ssh/deploy.key\n"
+  >> ~/.ssh/config
 - openssl aes-256-cbc -k "$SERVER_KEY" -in .travis/deploy_key.enc -d -a -out deploy.key
 - cp deploy.key ~/.ssh/
 - chmod 600 ~/.ssh/deploy.key
