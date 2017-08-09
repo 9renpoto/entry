@@ -26,7 +26,5 @@ categories:
 
 ## 現状
 
-[![孔明](http://tiqav.com/4BZ.th.jpg)](http://tiqav.com/4BZ)
-
 - 様子見
 - 簡単なサンプルを書いて依存はしておく
