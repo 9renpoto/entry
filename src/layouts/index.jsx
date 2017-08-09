@@ -19,7 +19,7 @@ export default class Template extends Component {
               {':-)'}
             </Link>}
           titles={['slides', 'profile']}
-          baseUrl={'https://9renpoto.gitihub.io'}
+          baseUrl={'https://9renpoto.github.io'}
         />
         {children()}
       </div>
