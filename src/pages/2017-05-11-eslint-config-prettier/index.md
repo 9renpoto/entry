@@ -7,8 +7,6 @@ categories:
 ---
 # eslint-config-prettierは使わない
 
-[![無理 ダメ](http://tiqav.com/1XA.th.jpg)](http://tiqav.com/1XA)
-
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 <https://github.com/prettier/eslint-config-prettier>

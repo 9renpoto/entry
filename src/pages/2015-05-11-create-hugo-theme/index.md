@@ -36,11 +36,7 @@ $ hugo new theme foo
     └── theme.toml
 ```
 
-[Document](http://gohugo.io/templates/overview/) がよくまとまっていますので参考に。
-
-- このあたりが特にお世話になりました
-  - [functions](http://gohugo.io/templates/functions/)
-  - [variables](http://gohugo.io/templates/variables/)
+[Document](http://gohugo.io/templates/) がよくまとまっていますので参考に。
 
 ## TODO
 

@@ -12,7 +12,7 @@ categories:
 
 ## Hugoを利用してgh-pagesにデプロイ
 
-公式ドキュメントでwercker-ciを利用したデプロイ方法が[紹介](https://gohugo.io/tutorials/automated-deployments/)されており、そちらを利用していましたが。
+公式ドキュメントでwercker-ciを利用したデプロイ方法が[紹介](https://gohugo.io/hosting-and-deployment/deployment-with-wercker/)されており、そちらを利用していましたが。
 
 ```sh
 http://9renpoto.github.io/<project_name>

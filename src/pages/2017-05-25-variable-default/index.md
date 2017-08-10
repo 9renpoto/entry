@@ -12,8 +12,6 @@ categories:
 
 ## \_variable.scss
 
-[![ドラえもん 知らない](http://tiqav.com/229.th.jpg)](http://tiqav.com/229)
-
 cssに変数があることはわかっていたつもりですが、上書きの用法がよくわかっておらず調べたので記録。
 
 ```scss

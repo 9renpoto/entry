@@ -25,7 +25,7 @@ categories:
 
 ## Refs
 
-- <http://blog.muuny-blue.info/7476533956dd3568c1d787c5d33a547f.html>
+- <https://muunyblue.github.io/7476533956dd3568c1d787c5d33a547f.html>
 - <https://blog.odoruinu.net/2017/02/24/changed-my-shell-from-zsh-to-fish/>
 - <https://github.com/fisherman/fisherman>
 

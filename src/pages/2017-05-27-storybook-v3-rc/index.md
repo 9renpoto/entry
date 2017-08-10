@@ -12,8 +12,6 @@ categories:
 
 ## storybook
 
-[![三国志](http://tiqav.com/1yr.th.jpg)](http://tiqav.com/1yr)
-
 `webpack v2` の流れもあり開発が止まってたstorybookの開発が、
 別のコントリビュータが入ったことで再開された。
 

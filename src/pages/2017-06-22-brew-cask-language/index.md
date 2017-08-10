@@ -23,10 +23,6 @@ firefox-beta firefox-esr firefoxdeveloperedition firefoxnightly multifirefox
 Error: invalid option: --language=en
 ```
 
-## 気持ち
-
-[![無理 グッドアイディア ナイスアイディア 名案](http://tiqav.com/5Hi.th.jpg)](http://tiqav.com/5Hi)
-
 ## Refs
 
 - <https://rcmdnk.com/blog/2016/10/31/computer-mac-homebrew-firefox/>

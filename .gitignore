@@ -1,6 +1,7 @@
 public/
 static/
 .gatsby-context.js
+.textlintcache
 .intermediate-representation/
 .cache/
 package-lock.json

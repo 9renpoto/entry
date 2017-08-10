@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import { Header } from '@9renpoto/style'
 import Link from 'gatsby-link'
+import 'prismjs/themes/prism-solarizedlight.css'
 
 type Props = {
   children: Function

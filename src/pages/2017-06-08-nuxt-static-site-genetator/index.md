@@ -37,5 +37,3 @@ categories:
 - next.jsも同様に可能？
   - <https://github.com/zeit/next.js/issues/604>
 - 普段はReactを触っていることが多いため可能ならこちらから
-
-[![ワンピース](http://tiqav.com/1Lg.th.jpg)](http://tiqav.com/1Lg)
