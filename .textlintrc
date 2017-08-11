@@ -15,7 +15,6 @@
     "no-mix-dearu-desumasu": true,
     "no-nfd": true,
     "preset-ja-spacing": true,
-    "preset-jtf-style": true,
-    "sentence-length": { "max": 100 }
+    "preset-jtf-style": true
   }
 }
