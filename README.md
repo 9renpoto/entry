@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/9renpoto/entry.png?label=ready&title=Ready)](https://waffle.io/9renpoto/entry?utm_source=badge)
 # @9renpoto/entry
 
 lazy build
