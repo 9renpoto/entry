@@ -7,19 +7,48 @@ type Props = {
   data: any
 }
 
+type State = {
+  posts: any
+}
+
 export default class BlogIndex extends Component {
   props: Props
+  state: State
+  constructor (props: Props) {
+    super(props)
+    this.state = {
+      posts: this.props.data.allMarkdownRemark.edges
+    }
+  }
   render () {
+    const { posts } = this.state
     const pageLinks = []
-    const posts = this.props.data.allMarkdownRemark.edges
-    posts.forEach(post => {
-      if (post.node.path !== '/404/') {
+    posts.forEach(({ node }) => {
+      if (node.path !== '/404/') {
         pageLinks.push(
-          <li key={post.node.frontmatter.path}>
-            <Link style={{ boxShadow: 'none' }} to={post.node.frontmatter.path}>
-              {post.node.frontmatter.title}
-            </Link>
-          </li>
+          <div className='box'>
+            <article className='media'>
+              <div className='media-content'>
+                <div className='content' key={node.frontmatter.path}>
+                  <Link
+                    style={{ boxShadow: 'none' }}
+                    to={node.frontmatter.path}
+                  >
+                    {node.frontmatter.title}
+                  </Link>
+                  <br />
+                  <div className='control'>
+                    <div className='tags has-addons'>
+                      <span className='tag is-dark'>created</span>
+                      <span className='tag is-primary'>
+                        {node.frontmatter.date}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
         )
       }
     })
@@ -27,9 +56,13 @@ export default class BlogIndex extends Component {
     return (
       <div>
         <Helmet title={this.props.data.site.siteMetadata.title} />
-        <ul>
-          {pageLinks}
-        </ul>
+        <section className='section'>
+          <div className='container'>
+            <h1 className='title'>Lazy build blog</h1>
+            <h2 className='subtitle'>Self-satisfaction without truth</h2>
+          </div>
+        </section>
+        {pageLinks}
       </div>
     )
   }
@@ -51,6 +84,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            date(formatString: "MMMM DD, YYYY")
           }
         }
       }

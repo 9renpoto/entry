@@ -1,5 +1,6 @@
 public/
-static/
+static/main.css
+static/main.css.map
 .gatsby-context.js
 .textlintcache
 .intermediate-representation/
@@ -67,4 +68,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
