@@ -24,8 +24,9 @@ export default class HTML extends Component {
           <link
             rel='stylesheet'
             type='text/css'
-            href={`${__PATH_PREFIX__}/main.min.css`}
+            href={`${__PATH_PREFIX__}/main.css`}
           />
+          <link rel='shortcut icon' href={`${__PATH_PREFIX__}/favicon.ico`} />
           {this.props.headComponents}
         </head>
         <body>

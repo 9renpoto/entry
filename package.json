@@ -28,8 +28,8 @@
     "@9renpoto/eslint-config-flowtype": "^0.4.0",
     "@9renpoto/eslint-config-react": "^0.1.0",
     "babel-preset-flow": "^6.23.0",
+    "cpx": "^1.5.0",
     "cross-env": "^5.0.5",
-    "cssnano-cli": "^1.0.5",
     "empty": "^0.10.1",
     "eslint": "^4.4.1",
     "flow-bin": "^0.52.0",
@@ -82,7 +82,7 @@
     "url": "git+https://github.com/9renpoto/entry.git"
   },
   "scripts": {
-    "b:css": "mkdir -p static && cssnano ./node_modules/@9renpoto/style/lib/main.css static/main.min.css",
+    "b:css": "cpx 'node_modules/@9renpoto/style/lib/**/*.{css,map}' static",
     "b:static": "cross-env NODE_ENV=production gatsby build",
     "build": "run-s b:css b:static",
     "clean": "rimraf public static",
