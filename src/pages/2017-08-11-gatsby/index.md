@@ -5,7 +5,7 @@ path: '/entry/2017/08/11/gatsby/'
 ---
 # TL;DR
 
-- gatsbyjsでブログを立て直したい
+- gatsbyjsでブログを立て直した
 - goodbye hugo
 
 ## 経緯
