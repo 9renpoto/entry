@@ -1,9 +1,7 @@
 ---
 title: "avast network check"
-date: "2018-08-19"
+date: '2017-08-19T21:37:00+09:00'
 path: "/entry/2017/08/19/avast/"
-categories:
-  - 'life'
 ---
 # TL;DR
 

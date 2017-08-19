@@ -35,6 +35,7 @@ export default class BlogIndex extends Component<Props, State> {
       }
       values[date].count++
     })
+    console.log(values)
     return Object.keys(values).map(data => values[data])
   }
   _getLinks () {
@@ -62,6 +63,12 @@ export default class BlogIndex extends Component<Props, State> {
           endDate={new Date()}
           numDays={365}
           values={this._getCalenderData()}
+          classForValue={(value: any) => {
+            if (!value) {
+              value = { count: 0 }
+            }
+            return `color-github-${value.count}`
+          }}
         />
         {this._getLinks()}
       </div>
