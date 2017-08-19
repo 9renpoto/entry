@@ -8,8 +8,7 @@ type Props = {
   children: Function
 }
 
-export default class Template extends Component {
-  props: Props
+export default class Template extends Component<Props> {
   render () {
     const { children } = this.props
     return (

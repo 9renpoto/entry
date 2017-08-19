@@ -9,8 +9,7 @@ type Props = {
 
 declare var __PATH_PREFIX__: string
 
-export default class HTML extends Component {
-  props: Props
+export default class HTML extends Component<Props> {
   render () {
     return (
       <html lang='ja'>

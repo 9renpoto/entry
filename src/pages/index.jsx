@@ -12,9 +12,7 @@ type State = {
   posts: any
 }
 
-export default class BlogIndex extends Component {
-  props: Props
-  state: State
+export default class BlogIndex extends Component<Props, State> {
   constructor (props: Props) {
     super(props)
     this.state = {
