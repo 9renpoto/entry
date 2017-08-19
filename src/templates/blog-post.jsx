@@ -6,8 +6,7 @@ type Props = {
   data: any
 }
 
-export default class BlogPostTemplate extends Component {
-  props: Props
+export default class BlogPostTemplate extends Component<Props> {
   render () {
     const { frontmatter, html } = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
