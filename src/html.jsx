@@ -23,7 +23,7 @@ export default class HTML extends Component<Props> {
           <link
             rel='stylesheet'
             type='text/css'
-            href={`${__PATH_PREFIX__}/main.css`}
+            href={`${__PATH_PREFIX__}/bundle.css`}
           />
           <link rel='shortcut icon' href={`${__PATH_PREFIX__}/favicon.ico`} />
           {this.props.headComponents}

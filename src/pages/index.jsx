@@ -35,7 +35,6 @@ export default class BlogIndex extends Component<Props, State> {
       }
       values[date].count++
     })
-    console.log(values)
     return Object.keys(values).map(data => values[data])
   }
   _getLinks () {
