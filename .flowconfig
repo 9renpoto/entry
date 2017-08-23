@@ -5,6 +5,8 @@
 <PROJECT_ROOT>/node_modules/graphql-skip-limit/src/.*
 <PROJECT_ROOT>/node_modules/typography/src/utils/.*
 <PROJECT_ROOT>/node_modules/typography/src/.*
+<PROJECT_ROOT>/node_modules/preact/src/.*
+<PROJECT_ROOT>/node_modules/preact/dist/preact.js.flow
 
 [include]
 
