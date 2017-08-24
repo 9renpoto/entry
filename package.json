@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@9renpoto/style": "github:9renpoto/style",
-    "gatsby": "1.8.16",
+    "gatsby": "1.9.3",
     "gatsby-link": "^1.6.8",
     "gatsby-plugin-google-analytics": "^1.0.4",
     "gatsby-plugin-manifest": "^1.0.4",
