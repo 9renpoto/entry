@@ -34,7 +34,7 @@
     "empty": "^0.10.1",
     "eslint": "^4.5.0",
     "flow-bin": "^0.53.1",
-    "gatsby-plugin-sitemap": "^1.2.2",
+    "gatsby-plugin-sitemap": "^2.0.0",
     "gh-pages": "^1.0.0",
     "husky": "^0.14.3",
     "lint-staged": "^4.0.3",
