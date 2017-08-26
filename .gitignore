@@ -2,7 +2,6 @@
 .gatsby-context.js
 .intermediate-representation/
 .textlintcache
-package-lock.json
 public/
 static/bundle.css
 static/bundle.css.map
