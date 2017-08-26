@@ -49,7 +49,6 @@ module.exports = {
         trackingId: `UA-39548809-3`
       }
     },
-    `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-preact`
