@@ -1,5 +1,4 @@
 [ignore]
-<PROJECT_ROOT>/node_modules/typography-theme-wordpress-2016/src/.*
 <PROJECT_ROOT>/node_modules/mitt/src/.*
 <PROJECT_ROOT>/node_modules/config-chain/test/.*
 <PROJECT_ROOT>/node_modules/graphql-skip-limit/src/.*
