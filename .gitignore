@@ -2,6 +2,7 @@
 .gatsby-context.js
 .intermediate-representation/
 .textlintcache
+flow-typed/
 public/
 static/bundle.css
 static/bundle.css.map

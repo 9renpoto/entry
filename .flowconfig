@@ -1,9 +1,4 @@
 [ignore]
-<PROJECT_ROOT>/node_modules/mitt/src/.*
-<PROJECT_ROOT>/node_modules/config-chain/test/.*
-<PROJECT_ROOT>/node_modules/graphql-skip-limit/src/.*
-<PROJECT_ROOT>/node_modules/preact/src/.*
-<PROJECT_ROOT>/node_modules/preact/dist/preact.js.flow
 
 [include]
 
