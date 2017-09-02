@@ -44,9 +44,7 @@ export default class BlogIndex extends Component<Props, State> {
       if (node.path !== '/404/') {
         pageLinks.push(
           <p>
-            <Link to={node.frontmatter.path}>
-              {node.frontmatter.title}
-            </Link>
+            <Link to={node.frontmatter.path}>{node.frontmatter.title}</Link>
           </p>
         )
       }
@@ -88,8 +86,6 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             path
-          }
-          frontmatter {
             title
             date(formatString: "YYYY-MM-DD")
           }
