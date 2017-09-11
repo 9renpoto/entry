@@ -70,7 +70,7 @@ Zg = function(a, b) {
 ## Extra
 
 - [stackoverflow](https://stackoverflow.com/questions/44412241/is-it-possible-to-read-experimentid-and-variationid-in-javascript-with-google-op)
-  - ABテストとしてJavaScript が実行できるので、自分でユニークなIDを配信して実行されているテストを特定しましょう
+  - ABテストとしてJavaScriptが実行できるので、自分でユニークなIDを配信して実行されているテストを特定しましょう
   - リバースエンジニアリングして危ない道を渡るよりも現実的
   - ちゃんとABテストの記録は計測できます、そうgoogle analyticsならね！
 
