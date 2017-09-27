@@ -24,7 +24,8 @@
     "gatsby-remark-smartypants": "^1.4.7",
     "gatsby-source-filesystem": "^1.4.12",
     "gatsby-transformer-remark": "^1.7.7",
-    "gatsby-transformer-sharp": "^1.6.5"
+    "gatsby-transformer-sharp": "^1.6.5",
+    "snyk": "^1.41.1"
   },
   "devDependencies": {
     "@9renpoto/eslint-config-flowtype": "^0.6.0",
@@ -98,6 +99,9 @@
     "lint:md": "markdownlint src/pages/",
     "precommit": "lint-staged",
     "start": "npm run b:css && gatsby develop",
-    "test": "npm run lint"
-  }
+    "test": "npm run lint",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
