@@ -95,7 +95,7 @@
     "dev": "gatsby develop",
     "flow": "flow-typed install -s && flow",
     "lint": "run-p lint:*",
-    "lint:eslint": "eslint . --ext=js,jsx --cache",
+    "eslint": "eslint . --ext=js,jsx --cache",
     "lint:ja": "textlint src/pages --cache",
     "lint:md": "markdownlint src/pages/",
     "precommit": "lint-staged",
