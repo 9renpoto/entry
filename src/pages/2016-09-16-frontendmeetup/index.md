@@ -29,7 +29,7 @@ by @takayuki_shmz (株式会社FiNC)
   - case by caseだけども
 - cssはコンポーネントと1v1
 - this.contents
-  - <https://facebook.github.io/react/docs/context.html>
+  - <https://reactjs.org/docs/context.html>
   - API層をcontextに渡しcontainerを呼ぶ
 
 ## 革命と秩序とSPA(React、flux、flowtype)
@@ -104,5 +104,5 @@ by @nacika_ins
 
 by @uryyyyyyy
 
-- <http://qiita.com/uryyyyyyy/items/9a8276f7241b650f1c15>
+- <https://qiita.com/uryyyyyyy/items/9a8276f7241b650f1c15>
 - <https://twitter.com/teppeis/status/776757447813771265>

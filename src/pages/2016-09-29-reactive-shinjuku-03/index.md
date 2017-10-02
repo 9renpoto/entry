@@ -19,7 +19,7 @@ categories:
   - リアクティブシステム && ドメイン駆動設計
 - ActorはDDDで示されるコンセプトを表現できる
 - リアクティブシステムとAkka
-- リアクティブ宣言 <http://www.reactivemanifesto.org/>
+- リアクティブ宣言 <https://www.reactivemanifesto.org/>
   - Elastic
   - Responsive
   - Reslilient
