@@ -21,7 +21,7 @@ http://9renpoto.github.io/<project_name>
 という名前になってしまい、個人ページとして構築を目的とした場合不満があったため環境を見直し。
 
 - [pages.github.com/](https://pages.github.com/)
-- [qiita.com/eichann/items/4fe61b8b9bbafcfbe847](http://qiita.com/eichann/items/4fe61b8b9bbafcfbe847#%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%82%922%E3%81%A4%E4%BD%9C%E6%88%90)
+- [qiita.com/eichann/items/4fe61b8b9bbafcfbe847](https://qiita.com/eichann/items/4fe61b8b9bbafcfbe847#%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%82%922%E3%81%A4%E4%BD%9C%E6%88%90)
 
 を参考に問題を解決するために手を動かし始めました。
 

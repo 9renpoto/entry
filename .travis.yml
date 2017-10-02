@@ -5,6 +5,7 @@ env:
   matrix:
   - CMD=flow
   - CMD=test
+  - CMD=eslint
   - CMD=build
   global:
   - secure: LwSzHftOhfG//XHDvq51HTGbwicb1QgV/Ywvt4vD20tDWhOUeeENH+KHUuLhk9T4eTQPE2iQyH0RaBSNEYAfJvIa930qGR3mHtfRy+mqF6YjXeO4iuU4uIaqJo0rF4nBxrMCfauKTjv1Nelzl5Ln/qBhHETdH4Pzd54n4Qaor+EvmQItsGzWGiuuQA/AZBHXm3X8eKY0xXjKtmzTb+gB09hJfmFhHXlXb8GyB3fg8nFsnCwtk0g2bf9W7pc6pdCyRN1f5U4WB4GApQDYOoEet5xha5nPWPrTWi9bQhPb0LbPbZLdI4/l2HfzCq2DAKdm0PbcuUbHo64Sro9/mSDr++8k8ddeJhQgPVpjjxkWL3eDxWqjeZ8iSj9uQwIEZsDiLAjYkBAYW4zqU33ya3ecQCcj07f6Ff37K8acpsNLQ25QF5rkYAtLzewN6zy1yFUZ+uV0ABVlspElU3fzIG0GHOgD8N9XQaUIoATQvXVNE0z6OfEedCZAFuNTUN552U4KT8AZq92n4g43GRMR5HTcOa+TBpfG6ljhR41B98XnaEb0+EPf6BQguylg9pk1+n8UWlY8SskDYmpAi7Tgcs9Mb0QVy2NwptDfiwSDbVUzQT3X/sJpEpVu2j3nuEgl7bggpwYve9J8ijoPIxi8qFJJjhGuTEIg259Vr+Yft6upkKo=
@@ -12,6 +13,7 @@ matrix:
   fast_finish: true
   allow_failures:
   - env: CMD=flow
+  - env: CMD=eslint
 script:
 - npm run $CMD
 after_success:

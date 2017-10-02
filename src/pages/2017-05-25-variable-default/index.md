@@ -23,4 +23,4 @@ $a: #777 !default
 
 ## Refs
 
-- <http://qiita.com/yuku_t/items/0bebe541432cdfad4e14>
+- <https://qiita.com/yuku_t/items/0bebe541432cdfad4e14>

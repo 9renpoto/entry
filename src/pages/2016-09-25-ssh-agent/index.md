@@ -20,5 +20,5 @@ ssh passphraseを常に問い合わされるようになった。
 
 ## Refs
 
-- <http://qiita.com/u6k/items/5970618c4a8c23f71fb9>
-- <http://qiita.com/tukiyo3/items/045f86c4242ec53953e2>
+- <https://qiita.com/u6k/items/5970618c4a8c23f71fb9>
+- <https://qiita.com/tukiyo3/items/045f86c4242ec53953e2>

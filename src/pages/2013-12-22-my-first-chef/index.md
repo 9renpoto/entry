@@ -109,4 +109,4 @@ bundle exec knife solo cook nodename
 
 ## 参考
 
-- [qiita.com/uchiunyo/item](http://qiita.com/uchiunyo/items/5aa243f7a39ae443e10d)
+- [qiita.com/uchiunyo/item](https://qiita.com/uchiunyo/items/5aa243f7a39ae443e10d)
