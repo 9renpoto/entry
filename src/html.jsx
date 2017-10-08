@@ -1,5 +1,5 @@
 /* @flow */
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 
 type Props = {
   headComponents: React$Element<any>,
@@ -9,7 +9,7 @@ type Props = {
 
 declare var __PATH_PREFIX__: string
 
-export default class HTML extends Component<Props> {
+export default class HTML extends PureComponent<Props> {
   render () {
     return (
       <html lang='ja'>

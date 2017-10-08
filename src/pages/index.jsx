@@ -1,5 +1,5 @@
 /* @flow */
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import CalendarHeatmap from 'react-calendar-heatmap'
@@ -12,7 +12,7 @@ type State = {
   posts: any
 }
 
-export default class BlogIndex extends Component<Props, State> {
+export default class BlogIndex extends PureComponent<Props, State> {
   constructor (props: Props) {
     super(props)
     this.state = {
@@ -39,22 +39,21 @@ export default class BlogIndex extends Component<Props, State> {
   }
   _getLinks () {
     const posts = this._getPosts()
-    const pageLinks = []
-    posts.forEach(({ node }) => {
-      if (node.path !== '/404/') {
-        pageLinks.push(
-          <p>
-            <Link to={node.frontmatter.path}>{node.frontmatter.title}</Link>
-          </p>
-        )
+    return posts.map(
+      ({ node: { path: globalPath, frontmatter: { path, title } } }, i) => {
+        if (globalPath !== '/404/') {
+          return (
+            <p key={i}>
+              <Link to={path}>{`${posts.length - i}. ${title}`}</Link>
+            </p>
+          )
+        }
       }
-    })
-
-    return pageLinks
+    )
   }
   render () {
     return (
-      <div>
+      <div className='container is-fluid'>
         <Helmet title={this.props.data.site.siteMetadata.title} />
         <CalendarHeatmap
           endDate={new Date()}
