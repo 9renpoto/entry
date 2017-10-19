@@ -1,7 +1,7 @@
 ---
 title: "SPAとInitial State"
 date: '2017-10-18T13:00:00+09:00'
-path: "/entry/2017/10/18//spa-initial-state/"
+path: "/entry/2017/10/18/spa-initial-state/"
 ---
 # TL;DR
 
