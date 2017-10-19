@@ -13,7 +13,6 @@ matrix:
   fast_finish: true
   allow_failures:
   - env: CMD=flow
-  - env: CMD=eslint
 script:
 - npm run $CMD
 after_success:
