@@ -12,7 +12,7 @@ path: "/entry/2017/10/21/plug-to-dain/"
 - [vim-plug](https://github.com/junegunn/vim-plug) が流行っているらしいから使っていた
 - [vim bootstrap](https://github.com/avelino/vim-bootstrap) で作成したものを使っていたが、これがさっぱり動かない
 
-## 入れてみた
+## after
 
 - とりあえずlightline, vim-guttierいれて簡単なコードを読めるように
 - <https://github.com/9renpoto/dotfiles/pull/106>
