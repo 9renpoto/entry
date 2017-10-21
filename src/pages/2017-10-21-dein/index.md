@@ -5,7 +5,7 @@ path: "/entry/2017/10/21/plug-to-dain/"
 ---
 # TL;DR
 
-- vimrcもtomlで各時代になったのか
+- vimrcもtomlで書く時代になったのか
 
 ## before
 
