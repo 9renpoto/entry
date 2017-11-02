@@ -1,6 +1,6 @@
 ---
 title: "travisで環境変数に気をつける"
-date: '2017-10-31T23:00:00+09:00'
+date: '2017-11-03T01:00:00+09:00'
 path: "/entry/2017/11/02/travis-pr-enviroment/"
 ---
 # TL;DR
