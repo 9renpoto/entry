@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 
 type Props = {
-  data: any
+  data: any;
 }
 
 export default class BlogPostTemplate extends Component<Props> {
@@ -17,12 +17,8 @@ export default class BlogPostTemplate extends Component<Props> {
         <section className='hero is-primary'>
           <div className='hero-body'>
             <div className='container'>
-              <h1 className='title'>
-                {frontmatter.title}
-              </h1>
-              <h2 className='subtitle'>
-                {frontmatter.date}
-              </h2>
+              <h1 className='title'>{frontmatter.title}</h1>
+              <h2 className='subtitle'>{frontmatter.date}</h2>
             </div>
           </div>
         </section>

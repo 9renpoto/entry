@@ -5,11 +5,11 @@ import Helmet from 'react-helmet'
 import CalendarHeatmap from 'react-calendar-heatmap'
 
 type Props = {
-  data: any
+  data: any;
 }
 
 type State = {
-  posts: any
+  posts: any;
 }
 
 export default class BlogIndex extends PureComponent<Props, State> {

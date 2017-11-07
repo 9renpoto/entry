@@ -8,6 +8,8 @@
   },
   "dependencies": {
     "@9renpoto/style": "github:9renpoto/style#build",
+    "@types/react": "^15.6.6",
+    "@types/react-helmet": "^5.0.3",
     "gatsby": "^1.9.102",
     "gatsby-link": "^1.6.23",
     "gatsby-plugin-feed": "^1.3.11",
@@ -18,6 +20,7 @@
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-sharp": "^1.6.17",
     "gatsby-plugin-sitemap": "^1.2.5",
+    "gatsby-plugin-typescript": "^1.4.10",
     "gatsby-remark-copy-linked-files": "^1.5.16",
     "gatsby-remark-images": "^1.5.28",
     "gatsby-remark-prismjs": "^1.2.9",
@@ -29,21 +32,16 @@
     "react-calendar-heatmap": "^1.6.1"
   },
   "devDependencies": {
-    "@9renpoto/eslint-config-flowtype": "^0.6.0",
-    "@9renpoto/eslint-config-react": "^0.2.0",
-    "babel-preset-flow": "^6.23.0",
+    "@9renpoto/tslint-config": "^3.3.0",
     "cpx": "^1.5.0",
     "cross-env": "^5.1.1",
     "empty": "^0.10.1",
-    "eslint": "^4.10.0",
-    "flow-bin": "^0.58.0",
-    "flow-typed": "^2.2.1",
     "gh-pages": "^1.0.0",
     "husky": "^0.14.3",
     "lint-staged": "^4.3.0",
     "markdownlint-cli": "^0.4.0",
     "npm-run-all": "^4.1.1",
-    "prettier-eslint-cli": "^4.4.0",
+    "prettier": "^1.8.1",
     "rimraf": "^2.6.2",
     "snyk": "^1.47.0",
     "textlint": "^9.0.1",
@@ -62,7 +60,9 @@
     "textlint-rule-no-mix-dearu-desumasu": "^3.0.3",
     "textlint-rule-no-nfd": "^1.0.1",
     "textlint-rule-preset-ja-spacing": "^2.0.1",
-    "textlint-rule-preset-jtf-style": "^2.3.0"
+    "textlint-rule-preset-jtf-style": "^2.3.0",
+    "tslint": "^5.8.0",
+    "tslint-react": "^3.2.0"
   },
   "homepage": "https://github.com/9renpoto/entry#readme",
   "keywords": [
@@ -70,9 +70,13 @@
   ],
   "license": "MIT",
   "lint-staged": {
-    "*.{js,jsx}": [
-      "prettier-eslint --write",
-      "eslint --cache",
+    "*.js": [
+      "prettier --write --single-quote --parser babylon",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "prettier --write --parser typescript",
+      "tslint --fix",
       "git add"
     ],
     "*.md": [
@@ -93,11 +97,10 @@
     "clean": "rimraf public static",
     "deploy": "npm run b:css && npm run b:static -- --prefix-paths",
     "dev": "gatsby develop",
-    "flow": "flow-typed install -s && flow",
     "lint": "run-p lint:*",
-    "eslint": "eslint . --ext=js,jsx --cache",
     "lint:ja": "textlint src/pages --cache",
     "lint:md": "markdownlint src/pages/",
+    "lint:ts": "tslint 'src/**/*'",
     "precommit": "lint-staged",
     "prepare": "npm run snyk-protect",
     "snyk-protect": "snyk protect",

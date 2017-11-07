@@ -5,7 +5,7 @@ import Link from 'gatsby-link'
 import 'prismjs/themes/prism-solarizedlight.css'
 
 type Props = {
-  children: Function
+  children: Function;
 }
 
 export default class Template extends PureComponent<Props> {

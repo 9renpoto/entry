@@ -1,15 +1,14 @@
-/* @flow */
 import React, { PureComponent } from 'react'
 
-type Props = {
-  headComponents: React$Element<any>,
-  postBodyComponents: React$Element<any>,
+interface Props {
+  headComponents: any
+  postBodyComponents: any
   body: any
 }
 
 declare var __PATH_PREFIX__: string
 
-export default class HTML extends PureComponent<Props> {
+export default class HTML extends PureComponent<Props, void> {
   render () {
     return (
       <html lang='ja'>

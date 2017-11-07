@@ -1,4 +1,0 @@
-{
-  "presets": ["react", "env", "stage-1", "flow"],
-  "plugins": ["add-module-exports"]
-}
