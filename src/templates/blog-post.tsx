@@ -1,4 +1,3 @@
-/* @flow */
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 
@@ -35,7 +34,6 @@ export default class BlogPostTemplate extends Component<Props> {
   }
 }
 
-declare var graphql: any // TODO remove
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
     site {
