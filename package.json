@@ -101,7 +101,7 @@
     "lint": "run-p lint:*",
     "lint:ja": "textlint src/pages --cache",
     "lint:md": "markdownlint src/pages/",
-    "lint:ts": "tslint 'src/**/*'",
+    "lint:ts": "tslint 'src/**/*.ts' 'src/**/*.tsx'",
     "precommit": "lint-staged",
     "prepare": "npm run snyk-protect",
     "snyk-protect": "snyk protect",
