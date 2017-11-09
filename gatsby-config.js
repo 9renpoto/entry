@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: 'https://9renpoto.github.io'
   },
   plugins: [
+    `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -82,8 +83,8 @@ module.exports = {
                   url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
                   guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
                   custom_elements: [{ 'content:encoded': edge.node.html }]
-                })
-              })
+                });
+              });
             },
             query: `
             {
@@ -111,4 +112,4 @@ module.exports = {
       }
     }
   ]
-}
+};

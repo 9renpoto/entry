@@ -1,15 +1,14 @@
-/* @flow */
 import React, { PureComponent } from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import CalendarHeatmap from 'react-calendar-heatmap'
 
 type Props = {
-  data: any
+  data: any;
 }
 
 type State = {
-  posts: any
+  posts: any;
 }
 
 export default class BlogIndex extends PureComponent<Props, State> {
@@ -19,13 +18,13 @@ export default class BlogIndex extends PureComponent<Props, State> {
       posts: this._getPosts()
     }
   }
-  _getPosts () {
+  _getPosts (): any {
     return this.props.data.allMarkdownRemark.edges
   }
   _getCalenderData () {
     const posts = this._getPosts()
-    const values = {}
-    posts.forEach(({ node }) => {
+    const values: any = {}
+    posts.forEach(({ node }: any) => {
       const { date } = node.frontmatter
       if (!values[date]) {
         values[date] = {
@@ -40,7 +39,10 @@ export default class BlogIndex extends PureComponent<Props, State> {
   _getLinks () {
     const posts = this._getPosts()
     return posts.map(
-      ({ node: { path: globalPath, frontmatter: { path, title } } }, i) => {
+      (
+        { node: { path: globalPath, frontmatter: { path, title } } }: any,
+        i: number
+      ): any => {
         if (globalPath !== '/404/') {
           return (
             <p key={i}>
@@ -72,7 +74,6 @@ export default class BlogIndex extends PureComponent<Props, State> {
   }
 }
 
-declare var graphql: any // TODO remove
 export const pageQuery = graphql`
   query IndexQuery {
     site {

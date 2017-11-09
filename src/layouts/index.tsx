@@ -1,11 +1,10 @@
-/* @flow */
 import React, { PureComponent } from 'react'
 import { Header } from '@9renpoto/style'
 import Link from 'gatsby-link'
 import 'prismjs/themes/prism-solarizedlight.css'
 
 type Props = {
-  children: Function
+  children: any;
 }
 
 export default class Template extends PureComponent<Props> {
@@ -14,7 +13,7 @@ export default class Template extends PureComponent<Props> {
     return (
       <div>
         <Header
-          Logo={className => (
+          Logo={(className: string) => (
             <Link className={className} to='/'>
               {':-)'}
             </Link>
