@@ -1,30 +1,30 @@
-const Promise = require('bluebird')
-const path = require('path')
+const Promise = require('bluebird');
+const path = require('path');
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
+  const { createPage } = boundActionCreators;
 
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('./src/templates/blog-post.jsx')
+    const blogPost = path.resolve('./src/templates/blog-post.tsx');
     resolve(
       graphql(
         `
-      {
-        allMarkdownRemark(limit: 1000) {
-          edges {
-            node {
-              frontmatter {
-                path
+          {
+            allMarkdownRemark(limit: 1000) {
+              edges {
+                node {
+                  frontmatter {
+                    path
+                  }
+                }
               }
             }
           }
-        }
-      }
-    `
+        `
       ).then(result => {
         if (result.errors) {
-          console.log(result.errors)
-          reject(result.errors)
+          console.log(result.errors);
+          reject(result.errors);
         }
 
         // Create blog posts pages.
@@ -35,9 +35,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             context: {
               path: edge.node.frontmatter.path
             }
-          })
-        })
+          });
+        });
       })
-    )
-  })
-}
+    );
+  });
+};
