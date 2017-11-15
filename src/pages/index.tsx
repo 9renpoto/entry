@@ -1,7 +1,7 @@
-import React, { PureComponent } from 'react'
 import Link from 'gatsby-link'
-import Helmet from 'react-helmet'
+import React, { PureComponent } from 'react'
 import CalendarHeatmap from 'react-calendar-heatmap'
+import Helmet from 'react-helmet'
 
 type Props = {
   data: any;
