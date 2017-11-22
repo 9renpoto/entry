@@ -1,5 +1,5 @@
 import Link from 'gatsby-link'
-import React, { PureComponent } from 'react'
+import * as React from 'react'
 import CalendarHeatmap from 'react-calendar-heatmap'
 import Helmet from 'react-helmet'
 
@@ -11,7 +11,7 @@ type State = {
   posts: any;
 }
 
-export default class BlogIndex extends PureComponent<Props, State> {
+export default class BlogIndex extends React.PureComponent<Props, State> {
   constructor (props: Props) {
     super(props)
     this.state = {

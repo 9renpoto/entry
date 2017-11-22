@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import * as React from 'react'
 
 interface Props {
   headComponents: any
@@ -8,7 +8,7 @@ interface Props {
 
 declare var __PATH_PREFIX__: string
 
-export default class HTML extends PureComponent<Props, void> {
+export default class HTML extends React.PureComponent<Props, void> {
   render () {
     return (
       <html lang='ja'>

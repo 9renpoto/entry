@@ -6,7 +6,6 @@ module.exports = {
     siteUrl: 'https://9renpoto.github.io'
   },
   plugins: [
-    `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -59,6 +58,17 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-preact`,
+    {
+      resolve: 'gatsby-plugin-typescript',
+      options: {
+        transpileOnly: true, // default
+        compilerOptions: {
+          target: `esnext`,
+          experimentalDecorators: true,
+          jsx: `react`
+        } // default
+      }
+    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
