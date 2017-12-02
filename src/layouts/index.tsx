@@ -1,13 +1,13 @@
 import { Header } from '@9renpoto/style'
 import Link from 'gatsby-link'
 import 'prismjs/themes/prism-solarizedlight.css'
-import React, { PureComponent } from 'react'
+import * as React from 'react'
 
 type Props = {
   children: any;
 }
 
-export default class Template extends PureComponent<Props> {
+export default class Template extends React.Component<Props, void> {
   render () {
     const { children } = this.props
     return (
@@ -21,7 +21,7 @@ export default class Template extends PureComponent<Props> {
           titles={['slides', 'profile']}
           baseUrl={'https://9renpoto.github.io'}
         />
-        {children()}
+        {children}
       </div>
     )
   }

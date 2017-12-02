@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import Helmet from 'react-helmet'
 
 type Props = {
   data: any;
 }
 
-export default class BlogPostTemplate extends Component<Props> {
+export default class BlogPostTemplate extends React.Component<Props, {}> {
   render () {
     const { frontmatter, html } = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
