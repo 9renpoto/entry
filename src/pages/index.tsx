@@ -11,7 +11,7 @@ type State = {
   posts: any;
 }
 
-export default class BlogIndex extends React.PureComponent<Props, State> {
+export default class BlogIndex extends Component<Props, State> {
   constructor (props: Props) {
     super(props)
     this.state = {

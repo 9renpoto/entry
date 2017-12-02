@@ -8,7 +8,7 @@ interface Props {
 
 declare var __PATH_PREFIX__: string
 
-export default class HTML extends React.PureComponent<Props, void> {
+export default class HTML extends React.Component<Props, void> {
   render () {
     return (
       <html lang='ja'>

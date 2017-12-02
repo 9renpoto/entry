@@ -10,6 +10,7 @@
     "removeComments": true,
     "importHelpers": true,
     "target": "esnext",
+    "module": "commonjs",
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -18,9 +19,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true
+    "noFallthroughCasesInSwitch": true
   },
   "include": [
     "./src/**/*"

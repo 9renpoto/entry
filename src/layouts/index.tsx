@@ -7,7 +7,7 @@ type Props = {
   children: any;
 }
 
-export default class Template extends React.PureComponent<Props> {
+export default class Template extends React.Component<Props, void> {
   render () {
     const { children } = this.props
     return (
@@ -21,7 +21,7 @@ export default class Template extends React.PureComponent<Props> {
           titles={['slides', 'profile']}
           baseUrl={'https://9renpoto.github.io'}
         />
-        {children()}
+        {children}
       </div>
     )
   }
